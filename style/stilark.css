@@ -10,6 +10,7 @@ body {
   fill: rgb(69, 69, 69);
   stroke: rgb(69, 69, 69);
   stroke-width: 50px;
+  cursor: pointer;
 }
 .sirkel1 {
   fill: #ffffff;
