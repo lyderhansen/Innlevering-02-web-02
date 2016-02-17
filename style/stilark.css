@@ -56,7 +56,7 @@ svg {
 }
 
 #tekstBoksHeader {
-    background-color: rgb(48, 23, 23);
+    background: -webkit-linear-gradient(rgb(68, 23, 23), rgb(108, 63, 63));
     height: 70px;
     color: rgb(255, 255, 255);
     padding-top: 30px;
