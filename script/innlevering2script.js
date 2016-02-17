@@ -37,26 +37,26 @@ var artikkelJSONliste = [{
 var antallPoster = ("circle").length;
 for (var i = 0; i < antallPoster; i++) {
     $("circle")
-        .addClass("sirkel1")
-        .attr("id", function(i) {
+        .addClass("sirkel1 ui-widget-content")
+        .attr("id", function (i) {
             return (i)
         })
 }
 
 var klikketId = "";
-$.each(artikkelJSONliste, function() {
+$.each(artikkelJSONliste, function () {
 
-    $(".sirkel1").on("click", function() {
+    $(".sirkel1").on("click", function () {
         klikketId = $(this).attr("id")
         $("#tekstboks").animate({
                 opacity: 1
-            }, 1000, function() {}),
+            }, 1000, function () {}),
             $("#tekstBoksHeader").html(artikkelJSONliste[klikketId].Tittel + ", " + artikkelJSONliste[klikketId].Arstall),
             $("#tekstBoksTxt").html(artikkelJSONliste[klikketId].Tekst),
             $("#linkInTekstBoks").attr('href', artikkelJSONliste[klikketId].Link),
             //$("#linkInTekstBoks").html(artikkelJSONliste[klikketId].Link),
             $("#tekstBoksLink").css({
-              "color": "white",
+                "color": "white",
             })
     });
 })
