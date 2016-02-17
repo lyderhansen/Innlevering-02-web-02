@@ -84,6 +84,14 @@ svg {
     color: rgb(255, 255, 255);
 }
 
+svg .ui-selecting {
+    fill: #FECA40;
+}
+
+svg .ui-selected {
+    fill: #F39814;
+}
+
 @media (max-width: 800px) {
     #container {
         max-width: 100%;
