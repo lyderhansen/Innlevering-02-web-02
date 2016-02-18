@@ -2,79 +2,99 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="style/stilark.css">
-  <link rel="stylesheet" href="script/jqueryUI/jquery-ui.min.css">
-  <link rel="stylesheet" href="script/jqueryUI/jquery-ui.theme.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/stilark.css">
+    <link rel="stylesheet" href="script/jqueryUI/jquery-ui.min.css">
+    <link rel="stylesheet" href="script/jqueryUI/jquery-ui.theme.css">
 
 </head>
 
 <body>
-  <div id="container">
-    <header id="header">
-      <section id="logoBanner">
-        <a href="#"><img id="roykLogoImg" src="images/royk-logo.png" alt="" /></a>
-      </section>
+    <div id="container">
+        <header id="header">
+            <section id="logoBanner">
+                <a href="#"><img id="roykLogoImg" src="images/royk-logo.png" alt="" /></a>
+            </section>
 
-    </header>
+            <div id="arstall">
+                <ul>
+                    <li class="arButton" id="alle"><a href="#">Alle</a></li>
+                    <li class="arButton" id="2011"><a href="#">2011</a></li>
+                    <li class="arButton" id="2012"><a href="#">2012</a></li>
+                    <li class="arButton" id="2013"><a href="#">2013</a></li>
+                    <li class="arButton" id="2014"><a href="#">2014</a></li>
+                    <li class="arButton" id="2015"><a href="#">2015</a></li>
 
-      <div id="containerDots">
-      <!--
+                </ul>
+            </div>
+
+        </header>
+
+        <div id="containerDots">
+            <!--
       <?xml version="1.0" encoding="utf-8"?>
       <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
        -->
-      <svg class="dots" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
-        <circle class="sirkel1" cx="330.848" cy="261.12" r="56.848" fill="rgb(255, 255, 255)" />
-        <circle class="sirkel1" cx="549.306" cy="179.556" r="60.555" fill="rgb(255, 255, 255)" />
-        <circle class="sirkel1" cx="503.246" cy="370.491" r="52.523" fill="rgb(255, 255, 255)" />
-        <circle class="sirkel1" cx="634.399" cy="326.921" r="33.368" fill="rgb(255, 255, 255)" />
-        <circle class="sirkel1" cx="544.029" cy="510.205" r="30.278" fill="rgb(255, 255, 255)" />
-        <circle class="sirkel1" cx="697.529" cy="195.705" r="43.778" fill="rgb(255, 255, 255)" />
-        <circle class="sirkel1" cx="516.222" cy="644.227" r="19.773" fill="rgb(255, 255, 255)" />
-      </svg>
+            <svg class="dots" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px" height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+                <circle class="sirkel1" cx="330.848" cy="261.12" r="56.848" fill="rgb(255, 255, 255)" />
+                <circle class="sirkel1" cx="549.306" cy="179.556" r="60.555" fill="rgb(255, 255, 255)" />
+                <circle class="sirkel1" cx="503.246" cy="370.491" r="52.523" fill="rgb(255, 255, 255)" />
+                <circle class="sirkel1" cx="634.399" cy="326.921" r="33.368" fill="rgb(255, 255, 255)" />
+                <circle class="sirkel1" cx="544.029" cy="510.205" r="30.278" fill="rgb(255, 255, 255)" />
+                <circle class="sirkel1" cx="697.529" cy="195.705" r="43.778" fill="rgb(255, 255, 255)" />
+                <circle class="sirkel1" cx="516.222" cy="644.227" r="19.773" fill="rgb(255, 255, 255)" />
+            </svg>
+        </div>
+
+
+        <div class="tekstboks fade">
+            <h3 id="tekstBoksHeader">Fredag 22. juli 2011 - Terrordagen – Hendelsesforløp</h3>
+            <section id="tekstBoksLink">
+                <a id="linkInTekstBoks" href="http://bit.ly/Tv2TerrorMassakren">Les mer</a>
+            </section>
+            <p id="tekstBoksTxt">Kl. 15.13.23: Overvåkingskamera fanger opp at Anders Behring Breivik kjører bombebilen inn i Grubbegata.Kl. 15.17.30: Iført en hjemmelaget politiuniform kommer Breivik seg uhindret avgårde fra Einar Gerhardsens plass og departementene, viftende med en pistol i høyre hånd.Kl. 15.25.19: En bilbombe går av i Grubbegata i Regjeringskvartalet. Eksplosjonen har skjedd mellom høyblokken hvor Statsministerens kontor og Justisdepartementet holder til og R4, som huser Olje- og energidepartementet og Nærings- og handelsdepartementet. ...
+            </p>
+        </div>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="script/jqueryUI/jquery-ui.min.js"></script>
+        <script src="script/roykside_module.js"></script>
+        <script src="script/roykside_app.js"></script>
+
+        <script>
+            $(window).on("load", function () {
+                function fade() {
+                    $('.fade').each(function () {
+                        /* Check the location of each desired element */
+                        var objectBottom = $(this).offset().top + $(this).outerHeight();
+                        var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+
+                        /* If the object is completely visible in the window, fade it in */
+                        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                            if ($(this).css('opacity') == 0) {
+                                $(this).fadeTo(500, 1);
+                            }
+                        } else { //object goes out of view (scrolling up)
+                            if ($(this).css('opacity') == 1) {
+                                $(this).fadeTo(500, 0);
+                            }
+                        }
+                    });
+                }
+                fade(); //Fade in completely visible elements during page-load
+                $(window).scroll(function () {
+                    fade();
+                }); //Fade in elements during scroll
+            });
+        </script>
+
     </div>
-
-
-    <div id="tekstboks">
-      <h3 id="tekstBoksHeader">Fredag 22. juli 2011 - Terrordagen – Hendelsesforløp</h3>
-      <section id="tekstBoksLink">
-        <a id="linkInTekstBoks" href="http://bit.ly/Tv2TerrorMassakren">Les mer</a>
-      </section>
-      <p id="tekstBoksTxt">Kl. 15.13.23: Overvåkingskamera fanger opp at Anders Behring Breivik kjører bombebilen inn i Grubbegata.Kl. 15.17.30: Iført en hjemmelaget politiuniform kommer Breivik seg uhindret avgårde fra Einar Gerhardsens plass og departementene, viftende
-        med en pistol i høyre hånd.Kl. 15.25.19: En bilbombe går av i Grubbegata i Regjeringskvartalet. Eksplosjonen har skjedd mellom høyblokken hvor Statsministerens kontor og Justisdepartementet holder til og R4, som huser Olje- og energidepartementet
-        og Nærings- og handelsdepartementet. ...
-      </p>
-    </div>
-
-    <div id="arstall">
-        <ul>
-<<<<<<< HEAD
-            <li class="arButton" id="alle"><a href="#">Alle</a></li>
-            <li class="arButton" id="2011"><a href="#">2011</a></li>
-            <li class="arButton" id="2012"><a href="#">2012</a></li>
-            <li class="arButton" id="2013"><a href="#">2013</a></li>
-            <li class="arButton" id="2014"><a href="#">2014</a></li>
-            <li class="arButton" id="2015"><a href="#">2015</a></li>
-=======
-            <li class="arButton" id="2011"><a href="#">2011</a></li>
-            <li class="arButton" id="2012">2012</li>
-            <li class="arButton" id="2013">2013</li>
-            <li class="arButton" id="2014">2014</li>
-            <li class="arButton" id="2015">2015</li>
->>>>>>> b21eb2666aa302032e542ab6238cf057e9fea364
-        </ul>
-    </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="script/jqueryUI/jquery-ui.min.js"></script>
-    <script src="script/roykside_module.js"></script>
-    <script src="script/roykside_app.js"></script>
-
-  </div>
-  <!-- end container -->
+    <!-- end container -->
 
 
 </body>
