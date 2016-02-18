@@ -1,4 +1,4 @@
-var ROYKSIDE_MODULE = (function () {
+var ROYKSIDE_MODULE = (function() {
     var artikkelJSONliste = {
         artikler: [{
             "Arstall": "2011",
@@ -39,28 +39,26 @@ var ROYKSIDE_MODULE = (function () {
     };
 
     //Legger til id til hver sirkel så de henter ut riktig tekst fra JSON liste
-    var leggTilId = function () {
+    var leggTilId = function() {
         var antallPoster = ("circle").length;
         for (var i = 0; i < antallPoster; i++) {
             $("circle")
-                .attr("id", function (i) {
+                .attr("id", function(i) {
                     return (i)
                 })
         }
     }; //--End leggTilId
 
     //Endrer teksten i infoboksen
-    var endreInfoBoks = function () {
+    var endreInfoBoks = function() {
         var klikketId = "";
-        var allDots = $("svg.dots > *");
-        $.each(artikkelJSONliste.artikler, function () {
-            $(".sirkel1").on("click", function () {
-                allDots.removeClass("on");
-                $(this).addClass("on");
+
+        $.each(artikkelJSONliste.artikler, function() {
+            $(".sirkel1").on("click", function() {
                 klikketId = $(this).attr("id");
                 $("#tekstboks").animate({
                         opacity: 1
-                    }, 1000, function () {}),
+                    }, 1000, function() {}),
                     $("#tekstBoksHeader").html(artikkelJSONliste.artikler[klikketId].Tittel + ", " + artikkelJSONliste.artikler[klikketId].Arstall),
                     $("#tekstBoksTxt").html(artikkelJSONliste.artikler[klikketId].Tekst),
                     $("#linkInTekstBoks").attr('href', artikkelJSONliste.artikler[klikketId].Link),
@@ -73,11 +71,11 @@ var ROYKSIDE_MODULE = (function () {
     }; //--End endreInfoBoks
 
     //Ser etter artikler som er laget i det året som står
-    var seEtterAr = function () {
+    var seEtterAr = function() {
         var klikketAr = "";
         var $alleSirkler = $(".sirkel1");
-        $.each(artikkelJSONliste.artikler, function (index, value) {
-            $(".arButton").on("click", function () {
+        $.each(artikkelJSONliste.artikler, function(index, value) {
+            $(".arButton").on("click", function() {
                 klikketAr = $(this).attr("id");
                 if (klikketAr == "alle") {
                     $alleSirkler.css("fill", "rgb(255,255,255)");
@@ -101,12 +99,22 @@ var ROYKSIDE_MODULE = (function () {
 
     }; //--end seEtterAr
 
+    var fyllSirkel = function() {
+        var allDots = $("svg.dots > *");
+        $(".sirkel1").on("click", function() {
+            allDots.css("fill", "rgb(255,255,255)");
+            $(this).css("fill", "rgb(68, 23, 23)");
+
+        })
+    };
+
 
     //returnerer funksjonene så de kan brukes i appen
     return {
         leggTilId: leggTilId,
         endreInfoBoks: endreInfoBoks,
-        seEtterAr: seEtterAr
+        seEtterAr: seEtterAr,
+        fyllSirkel: fyllSirkel
     }; //--end return
 
 })();

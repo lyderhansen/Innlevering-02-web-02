@@ -91,8 +91,8 @@ svg {
 
 .on {
     fill: rgb(68, 23, 23);
-    /*stroke: rgb(108, 63, 63);
-    stroke-width: 2;*/
+    stroke: rgb(108, 63, 63);
+    stroke-width: 2;
 }
 
 ul {
