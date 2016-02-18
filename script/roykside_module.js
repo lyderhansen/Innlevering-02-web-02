@@ -101,10 +101,13 @@ var ROYKSIDE_MODULE = (function() {
                     opacity: 0,
                     bottom: "-300px"
                 })
+                .stop()
                 .animate({
                     opacity: 1,
                     bottom: "0px"
-                }, 1000, function() {})
+                }, 1000, function() {
+
+                })
         })
     }; //--end fadeInArtikkel
 

@@ -12,14 +12,11 @@
             }();
 
             var setEvents = function() {
-
-
                 RA.seEtterAr();
                 RA.leggTilId();
                 RA.endreInfoBoks();
                 RA.fyllSirkel();
                 RA.fadeInArtikkel();
-
             }();
 
         }, //--end init
@@ -35,14 +32,17 @@
             ROYKSIDE_MODULE.leggTilId();
         }, //--end leggTilId
 
+        //Fyller inn sirklene til året du klikket på
         seEtterAr: function() {
             ROYKSIDE_MODULE.seEtterAr();
         }, //--end seEtterAr
 
+        //fyller inn sirkler med farger
         fyllSirkel: function() {
             ROYKSIDE_MODULE.fyllSirkel();
         },//--end fyllSirkel
 
+        //fader inn artikler fra bunnen av
         fadeInArtikkel: function(){
             ROYKSIDE_MODULE.fadeInArtikkel();
         }//--end fadeInArtikkel
