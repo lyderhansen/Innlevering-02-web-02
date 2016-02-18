@@ -9,7 +9,7 @@ body {
 .sirkel1:hover {
   fill: rgb(69, 69, 69);
   stroke: rgb(69, 69, 69);
-  stroke-width: 50px;
+  stroke-width: 1px;
   cursor: pointer;
 }
 .sirkel1 {
@@ -21,6 +21,7 @@ body {
 #logoBanner {
   background: -webkit-linear-gradient(rgb(48, 23, 23), rgb(108, 63, 63));
   height: 100px;
+  margin-bottom: 30px;
 }
 #roykLogoImg {
   height: 60px;
@@ -32,12 +33,12 @@ body {
   margin-right: auto;
 }
 #containerDots {
-  height: 500px;
+  height: 440px;
 }
 svg {
   display: inline-block;
   margin: auto;
-  height: 500px;
+  height: 400px;
 }
 #tekstboks {
   background-color: rgb(0, 183, 255);
@@ -75,8 +76,7 @@ svg {
 }
 .on {
   fill: rgb(68, 23, 23);
-  stroke: rgb(108, 63, 63);
-  stroke-width: 2;
+
 }
 @media (max-width: 800px) {
   #container {

@@ -6,7 +6,7 @@ var artikkelJSONliste = [{
 }, {
   "Arstall": 2012,
   "Tittel": "Jakten på rasistvolden etter 22.juli",
-  "Tekst": "Er det sant at innvandrere ble banket opp etter at bomben gikk av 22. juli? Landets 27 politidistrikter har søkt i loggene og ikke funnet en eneste hendelse\n\n22. juli 2011 var Houda Thaythay så tidlig ferdig på et datakurs i Oslo at hun rakk fredagsbønnen. Den norskmarokkanske kvinnen hadde satt seg i moskeen noen få hundre meter fra Regjeringskvartalet da hun hørte et kraftig smell. Bygningen ristet, husker hun, flere skrek. Imamen beroliget: \"Det var kanskje bare torden.\" Så, ny beskjed: \"Forlat lokalene!\"\n\nHvorfor? Hva skjer? De gikk usikre ut på gaten. Gasseksplosjon, sa noen. Bombe, sa andre. Uroen vokste da Houda og to damer gikk gjennom sentrum, mot bussen få minutter etter eksplosjonen. Utenfor 7 Eleven i Storgata sto flere samlet. Ifølge Thaythay pekte de på henne og venninnene i hijab, for så å rope: \"Det er Al-Qaida som har gjort det! Det er Al-Qaida!\"",
+  "Tekst": "Er det sant at innvandrere ble banket opp etter at bomben gikk av 22. juli? Landets 27 politidistrikter har søkt i loggene og ikke funnet en eneste hendelse\n\n22. juli 2011 var Houda Thaythay så tidlig ferdig på et datakurs i Oslo at hun rakk fredagsbønnen. Den norskmarokkanske kvinnen hadde satt seg i moskeen noen få hundre meter fra Regjeringskvartalet da hun hørte et kraftig smell. Bygningen ristet, husker hun, flere skrek. Imamen beroliget: \"Det var kanskje bare torden.\" Så, ny beskjed: \"Forlat lokalene!\"\n\nHvorfor? Hva skjer? De gikk usikre ut på gaten. Gasseksplosjon, sa noen. Bombe, sa andre. Uroen vokste da Houda og to damer gikk gjennom sentrum, mot bussen få minutter etter eksplosjonen. Utenfor 7 Eleven i Storgata sto flere samlet...",
   "Link": "http://bit.ly/AftenJakten"
 }, {
   "Arstall": 2013,
@@ -34,9 +34,9 @@ var artikkelJSONliste = [{
   "Tekst": "Det skulle være politiets store omstillingsprogram etter all kritikken i kjølvannet av 22. juli. Men til slutt stoppet Politidirektoratet å telle tiltakene og la ned programmet.\nOver fire år etter terrorangrepet mot Utøya og regjeringskvartalet, setter 22. juli fortsatt sitt tydelige preg på politiet.\n\nKritikken fra 22. juli-kommisjonen sparket i gang en storstilt omstilling, og en endeløs rekke tiltak for å gjøre ordensmakten bedre.",
   "Link": "http://bit.ly/BTHalvpartenAvTiltakene"
 }];
-var antallPoster = ("circle").length;
+var antallPoster = ("path").length;
 for (var i = 0; i < antallPoster; i++) {
-  $("circle")
+  $("path")
     .addClass("sirkel1")
     .attr("id", function(i) {
       return (i)
@@ -44,7 +44,7 @@ for (var i = 0; i < antallPoster; i++) {
 }
 
 var klikketId = "";
-var allDots = $("svg.dots > *");
+var allDots = $("g.dots > *");
 $.each(artikkelJSONliste, function() {
 
   $(".sirkel1").on("click", function() {
