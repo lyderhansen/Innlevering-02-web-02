@@ -99,6 +99,7 @@ var ROYKSIDE_MODULE = (function() {
 
     }; //--end seEtterAr
 
+    //Fyller sirkler med fargen for å override inline css fra tidligere funksjoner
     var fyllSirkel = function() {
         var allDots = $("svg.dots > *");
         $(".sirkel1").on("click", function() {
@@ -106,7 +107,7 @@ var ROYKSIDE_MODULE = (function() {
             $(this).css("fill", "rgb(68, 23, 23)");
 
         })
-    };
+    };//--end fyllSirkel
 
 
     //returnerer funksjonene så de kan brukes i appen
