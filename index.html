@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style/stilark.css">
-    <link rel="stylesheet" href="script/jqueryUI/jquery-ui.min.css">
-    <link rel="stylesheet" href="script/jqueryUI/jquery-ui.theme.css">
 
 </head>
 
@@ -53,7 +51,9 @@
             <section id="tekstBoksLink">
                 <a id="linkInTekstBoks" href="http://bit.ly/Tv2TerrorMassakren">Les mer</a>
             </section>
-            <p id="tekstBoksTxt">Kl. 15.13.23: Overvåkingskamera fanger opp at Anders Behring Breivik kjører bombebilen inn i Grubbegata.Kl. 15.17.30: Iført en hjemmelaget politiuniform kommer Breivik seg uhindret avgårde fra Einar Gerhardsens plass og departementene, viftende med en pistol i høyre hånd.Kl. 15.25.19: En bilbombe går av i Grubbegata i Regjeringskvartalet. Eksplosjonen har skjedd mellom høyblokken hvor Statsministerens kontor og Justisdepartementet holder til og R4, som huser Olje- og energidepartementet og Nærings- og handelsdepartementet. ...
+            <p id="tekstBoksTxt">Kl. 15.13.23: Overvåkingskamera fanger opp at Anders Behring Breivik kjører bombebilen inn i Grubbegata.Kl. 15.17.30: Iført en hjemmelaget politiuniform kommer Breivik seg uhindret avgårde fra Einar Gerhardsens plass og departementene, viftende
+                med en pistol i høyre hånd.Kl. 15.25.19: En bilbombe går av i Grubbegata i Regjeringskvartalet. Eksplosjonen har skjedd mellom høyblokken hvor Statsministerens kontor og Justisdepartementet holder til og R4, som huser Olje- og energidepartementet
+                og Nærings- og handelsdepartementet. ...
             </p>
         </div>
 
@@ -66,9 +66,9 @@
         <script src="script/roykside_app.js"></script>
 
         <script>
-            $(window).on("load", function () {
+            $(window).on("load", function() {
                 function fade() {
-                    $('.fade').each(function () {
+                    $('.fade').each(function() {
                         /* Check the location of each desired element */
                         var objectBottom = $(this).offset().top + $(this).outerHeight();
                         var windowBottom = $(window).scrollTop() + $(window).innerHeight();
@@ -86,7 +86,7 @@
                     });
                 }
                 fade(); //Fade in completely visible elements during page-load
-                $(window).scroll(function () {
+                $(window).scroll(function() {
                     fade();
                 }); //Fade in elements during scroll
             });
