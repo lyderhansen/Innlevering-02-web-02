@@ -92,6 +92,7 @@ var ROYKSIDE_MODULE = (function() {
         })
     }; //--end seEtterAr
 
+    //Fader inn artiklene fra bunnen av, resettes mellom hvert trykk.
     var fadeInArtikkel = function() {
         var $tekstboks = $(".tekstboks");
         $(".sirkel1").on("click", function() {
