@@ -18,6 +18,7 @@
                 RA.leggTilId();
                 RA.endreInfoBoks();
                 RA.fyllSirkel();
+                RA.fadeInArtikkel();
 
             }();
 
@@ -40,7 +41,11 @@
 
         fyllSirkel: function() {
             ROYKSIDE_MODULE.fyllSirkel();
-        }//--end fyllSirkel
+        },//--end fyllSirkel
+
+        fadeInArtikkel: function(){
+            ROYKSIDE_MODULE.fadeInArtikkel();
+        }//--end fadeInArtikkel
 
     }; //--end SLIDESHOWAPP
 

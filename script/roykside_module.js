@@ -52,21 +52,16 @@ var ROYKSIDE_MODULE = (function() {
     //Endrer teksten i infoboksen
     var endreInfoBoks = function() {
         var klikketId = "";
-
         $.each(artikkelJSONliste.artikler, function() {
             $(".sirkel1").on("click", function() {
                 klikketId = $(this).attr("id");
-                $("#tekstboks").animate({
-                        opacity: 1
-                    }, 1000, function() {}),
-                    $("#tekstBoksHeader").html(artikkelJSONliste.artikler[klikketId].Tittel + ", " + artikkelJSONliste.artikler[klikketId].Arstall),
+                $("#tekstBoksHeader").html(artikkelJSONliste.artikler[klikketId].Tittel + ", " + artikkelJSONliste.artikler[klikketId].Arstall),
                     $("#tekstBoksTxt").html(artikkelJSONliste.artikler[klikketId].Tekst),
                     $("#linkInTekstBoks").attr('href', artikkelJSONliste.artikler[klikketId].Link),
                     $("#tekstBoksLink").css({
                         "color": "white",
                     })
             })
-
         })
     }; //--End endreInfoBoks
 
@@ -94,10 +89,23 @@ var ROYKSIDE_MODULE = (function() {
                     }
                 }
             })
-
         })
-
     }; //--end seEtterAr
+
+    var fadeInArtikkel = function() {
+        var $tekstboks = $(".tekstboks");
+        $(".sirkel1").on("click", function() {
+            $tekstboks
+                .css({
+                    opacity: 0,
+                    bottom: "-300px"
+                })
+                .animate({
+                    opacity: 1,
+                    bottom: "0px"
+                }, 1000, function() {})
+        })
+    }; //--end fadeInArtikkel
 
     //Fyller sirkler med fargen for å override inline css fra tidligere funksjoner
     var fyllSirkel = function() {
@@ -107,7 +115,7 @@ var ROYKSIDE_MODULE = (function() {
             $(this).css("fill", "rgb(68, 23, 23)");
 
         })
-    };//--end fyllSirkel
+    }; //--end fyllSirkel
 
 
     //returnerer funksjonene så de kan brukes i appen
@@ -115,6 +123,7 @@ var ROYKSIDE_MODULE = (function() {
         leggTilId: leggTilId,
         endreInfoBoks: endreInfoBoks,
         seEtterAr: seEtterAr,
+        fadeInArtikkel: fadeInArtikkel,
         fyllSirkel: fyllSirkel
     }; //--end return
 
